@@ -21,7 +21,7 @@
         },
         "repoUrl": {
             "type": "string",
-            "defaultValue": "https://github.com/YOUR-USERNAME/FunctionsChallenge-Deployment"
+            "defaultValue": "https://github.com/azure-appservice-samples/FunctionsChallenge-Deployment"
         },
         "branch": {
             "type": "string",
