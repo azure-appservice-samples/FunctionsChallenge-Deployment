@@ -38,7 +38,7 @@
         "storageAccountType": "Standard_LRS",
         "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
         "storageLocation": "[parameters('location')]",
-        "subscriptionId": "[resourceGroup().id]"
+        "subscriptionId": "[subscription().subscriptionId]"
     },
     "resources": [
         {
