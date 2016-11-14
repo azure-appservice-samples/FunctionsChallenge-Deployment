@@ -38,7 +38,7 @@
         "storageAccountType": "Standard_LRS",
         "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
         "storageLocation": "[parameters('location')]",
-        "subscriptionId": "[subscription().subscriptionId]"
+        "ChallengeKey": "[subscription().subscriptionId]"
     },
     "resources": [
         {
@@ -88,7 +88,7 @@
                         "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
                         "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
                         "FUNCTIONS_EXTENSION_VERSION": "~0.9",
-                        "SubscriptionId": "[variables('subscriptionId')]",
+                        "ChallengeKey": "[variables('ChallengeKey')]",
                         "PROJECT": "src"
                     }
                 },
